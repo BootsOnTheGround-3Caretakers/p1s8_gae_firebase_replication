@@ -1,0 +1,259 @@
+queue:
+- name: p1s1t1-create-organization
+  mode: pull
+  
+- name: p1s1t2-create-object
+  mode: pull
+  
+- name: p1s1t3-create-user
+  mode: pull  
+
+- name: p1s1t4-create-object-attribute
+  mode: pull 
+  
+- name: p1s1t5-create-user-attribute
+  mode: pull 
+    
+- name: p1s1t6-create-organization-attribute
+  mode: pull
+  
+- name: p1s2t1-create-transaction
+  mode: push
+  target: create-transaction
+  rate: 100/s
+
+- name: p1s3t3-set-datastore-updated
+  mode: push
+  target: monitoring-server
+  rate: 500/s
+
+- name: p1s3t6-enable-object-rx-tx-monitoring
+  mode: push
+  target: monitoring-server
+  rate: 100/s
+  
+- name: p1s3t7-send-object-tx-data
+  mode: push
+  target: monitoring-server
+  rate: 100/s    
+  
+  
+- name: p1s4t1-set-monitoring-flag
+  mode: push
+  target: modify-organization
+  rate: 100/s
+
+- name: p1s4t2-enable-object-attribute
+  mode: push
+  target: modify-organization
+  rate: 100/s  
+
+- name: p1s4t3-change-text
+  mode: push
+  target: modify-organization
+  rate: 100/s
+  
+- name: p1s4t4-change-type
+  mode: push
+  target: modify-organization
+  rate: 100/s
+
+- name: p1s4t5-set-auto-add-new-processor
+  mode: push
+  target: modify-organization
+  rate: 100/s
+
+- name: p1s4t6-copy-user-permissions
+  mode: push
+  target: modify-organization
+  rate: 100/s
+
+- name: p1s4t7-assign-patron-to-partner
+  mode: push
+  target: modify-organization
+  rate: 100/s  
+  
+  
+- name: p1s5t1-add-attribute
+  mode: push
+  target: modify-object
+  rate: 500/s
+
+- name: p1s5t2-set-processor
+  mode: push
+  target: modify-object
+  rate: 500/s
+
+- name: p1s5t3-enable-processor
+  mode: push
+  target: modify-object
+  rate: 100/s
+
+- name: p1s5t4-enable-object
+  mode: push
+  target: modify-object
+  rate: 100/s 
+  
+- name: p1s5t5-change-object-text
+  mode: push
+  target: modify-object
+  rate: 100/s
+  
+- name: p1s5t6-change-attribute-text
+  mode: push
+  target: modify-object
+  rate: 100/s  
+
+- name: p1s5t7-change-settable-value-data
+  mode: push
+  target: modify-object
+  rate: 100/s
+  
+- name: p1s5t8-delete-object
+  mode: push
+  target: modify-object
+  rate: 100/s
+  
+- name: p1s5t9-delete-processor
+  mode: push
+  target: modify-object
+  rate: 100/s    
+
+- name: p1s6t1-object-attribute
+  mode: push
+  target: push-attribute-to-datastore
+  rate: 100/s
+  
+- name: p1s6t2-object-comm-data
+  mode: push
+  target: push-attribute-to-datastore
+  rate: 100/s  
+
+- name: p1s6t3-object-log-data
+  mode: push
+  target: push-attribute-to-datastore
+  rate: 100/s    
+  
+  
+  
+- name: p1s7t1-receive-transaction
+  mode: push
+  target: user-interface-rx
+  rate: 100/s
+
+- name: p1s8t1-push-datastore-change
+  mode: push
+  target: user-interface-tx
+  rate: 100/s
+  
+- name: p1s8t2-send-transaction
+  mode: push
+  target: user-interface-tx
+  rate: 100/s
+
+- name: p1s8t3-push-firebase-change
+  mode: push
+  target: user-interface-tx
+  rate: 100/s
+
+- name: p1s8t4-send-email
+  mode: push
+  target: user-interface-tx
+  rate: 50/s  
+  
+- name: p1s8t5-send-organization-key
+  mode: push
+  target: user-interface-tx
+  rate: 50/s  
+  
+  
+- name: p1s9t1-set-organization-permissions
+  mode: push
+  target: modify-user
+  rate: 100/s    
+
+- name: p1s9t2-set-object-permissions
+  mode: push
+  target: modify-user
+  rate: 100/s
+  
+- name: p1s9t3-change-information
+  mode: push
+  target: modify-user
+  rate: 100/s 
+  
+- name: p1s9t4-set-account-type
+  mode: push
+  target: modify-user
+  rate: 100/s   
+
+- name: p1s9t5-assign-organization-to-user
+  mode: push
+  target: modify-user
+  rate: 100/s
+
+- name: p1s9t6-unassign-organization-to-user
+  mode: push
+  target: modify-user
+  rate: 100/s
+
+- name: p1s10t1-set-organization-primary-parent
+  mode: pull
+
+- name: p1s10t2-queue-priority-email
+  mode: pull  
+  
+  
+- name: p1s11t1-create-rule
+  mode: push
+  target: notifications
+  rate: 100/s  
+  
+- name: p1s11t2-assign-rule
+  mode: push
+  target: notifications
+  rate: 100/s 
+
+- name: p1s11t3-unassign-rule
+  mode: push
+  target: notifications
+  rate: 100/s 
+  
+- name: p1s11t5-modify-rule
+  mode: push
+  target: notifications
+  rate: 100/s 
+
+- name: p1s11t4-check-object-attribute
+  mode: push
+  target: notifications
+  rate: 100/s
+  
+- name: p1s11t6-delete-rule
+  mode: push
+  target: notifications
+  rate: 100/s  
+
+  
+- name: p1s12t1-start-pull-service
+  mode: push
+  target: health-monitoring
+  rate: 100/s
+
+
+  
+- name: p1s13t1-billing-tx
+  mode: push
+  target: billing-rx-tx
+  rate: 100/s
+  
+- name: pp1s13t1-billing-rx
+  mode: push
+  target: billing-rx-tx
+  rate: 100/s
+
+- name: p1s13t3-push-datastore-change
+  mode: push
+  target: billing-rx-tx
+  rate: 100/s      
+  

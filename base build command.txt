@@ -1,0 +1,10 @@
+<json-content>{"list_of_dicts" :
+[
+{"deploy_repo":"DamianoGlobal/dgnet_watchdog_gae_p1s8","branch":"dev-stable"},
+{"include_repo":"DamianoGlobal/dgnet_watchdog_gae_p1_global_includes","branch":"dev-stable"},
+{"include_repo":"DamianoGlobal/dgnet_watchdog_gae_p2_global_includes","branch":"dev-stable"},
+{"include_repo":"DamianoGlobal/dgnet_watchdog_gae_p3_global_includes","branch":"dev-stable"},
+{"include_repo":"DamianoGlobal/python_base_includes","branch":"dev-stable"},
+{"include_repo":"DamianoGlobal/dgnet_watchdog_gae_p3_recording_includes","branch":"dev-stable"}
+]
+}</json-content>
